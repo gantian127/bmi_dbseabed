@@ -10,8 +10,7 @@ class DbSeabed:
     # TODO update the dict to add actural var info
     DATA_SERVICES = {
         "carbonate": {
-            "name": "Ocean Carbonate",
-            "standard_name": "ocean_carbonate",
+            "name": "ocean_carbonate",
             "link": "https://files.isric.org/soilgrids/former/2017-03-10/data/BDRICM_M_250m_ll.tif",
             "units": "%",
         }
@@ -35,8 +34,8 @@ class DbSeabed:
         for key, value in DbSeabed.DATA_SERVICES.items():
             string_list.extend(
                 [
-                    f"service id: {key}",
-                    f"variable name: {value['name']}",
+                    f"variable name: {key}",
+                    f"Bmi standard name: {value['name']}",
                     f"variable units: {value['units']}",
                     f"data link: {value['link']}",
                 ]
@@ -55,6 +54,9 @@ class DbSeabed:
     ):  # TODO: change the parameters as required.
 
         # TODO: add docstrings
+        # check var_name
+        if var_name not in DbSeabed.DATA_SERVICES.keys():
+            raise ValueError("Please provide a valid var_name value.")
 
         # check bounding box
         if west > east or south > north:
@@ -105,8 +107,8 @@ class DbSeabed:
             else os.path.join(os.getcwd(), output)
         )
         self._metadata = {
-            "variable_name": DbSeabed.DATA_SERVICES[var_name]["name"],
-            "bmi_standard_name": DbSeabed.DATA_SERVICES[var_name]["standard_name"],
+            "variable_name": var_name,
+            "bmi_standard_name": DbSeabed.DATA_SERVICES[var_name]["name"],
             "variable_units": DbSeabed.DATA_SERVICES[var_name]["units"],
             "service_url": DbSeabed.DATA_SERVICES[var_name]["link"],
             "crs_wkt": crs_wkt,
