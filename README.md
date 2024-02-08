@@ -6,7 +6,7 @@
 
 bmi_dbseabed provides a set of functions that allow downloading of
 the dataset from [dbSEABED](https://instaar.colorado.edu/~jenkinsc/dbseabed/), 
-a system across marine substrates datasets across the US.
+a system for marine substrates datasets across the US.
 
 bmi_dbseabed also includes a [Basic Model Interface (BMI)](https://bmi.readthedocs.io/en/latest/),
 which converts the dbSEABED datasets into a reusable,
@@ -50,7 +50,7 @@ and follow the instruction in the "Lab notes" section.
 import matplotlib.pyplot as plt
 from bmi_dbseabed import DbSeabed
 
-# get data from SoilGrids
+# get data from dbSEABED
 dbseabed = DbSeabed()
 data = dbseabed.get_data(
     var_name="carbonate",
