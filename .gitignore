@@ -1,0 +1,8 @@
+*.egg-info/
+*.ipynb_checkpoints/
+*.py[cod]
+.coverage
+.nox/
+__pycache__/
+build/
+dist/
