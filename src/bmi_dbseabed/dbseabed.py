@@ -43,7 +43,7 @@ class DbSeabed:
             )
         print(os.linesep.join(string_list))
 
-    def get_dataset(
+    def get_data(
         self,
         var_name,
         west=-66.8,

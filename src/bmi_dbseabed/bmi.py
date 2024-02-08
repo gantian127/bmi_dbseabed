@@ -5,7 +5,7 @@ from collections import namedtuple
 import numpy
 import yaml
 from bmipy import Bmi
-from dbseabed import DbSeabed
+from bmi_dbseabed.dbseabed import DbSeabed
 
 BmiVar = namedtuple(
     "BmiVar", ["dtype", "itemsize", "nbytes", "units", "location", "grid"]
@@ -42,7 +42,7 @@ class BmiDbSeabed(Bmi):
         str
             The name of the component.
         """
-        return "SoilGrids"
+        return "bmi_dbseabed"
 
     def get_current_time(self) -> float:
         """Current time of the model.
@@ -590,15 +590,15 @@ class BmiDbSeabed(Bmi):
         else:
             conf = {
                 "var_name": "carbonate",
-                "west": -1784000,
-                "south": 1356000,
-                "east": -1140000,
-                "north": 1863000,
+                "west": -66.8,
+                "south": 18.0,
+                "east": -66.2,
+                "north": 18.4,
                 "output": "download.tif",
             }
 
         dbseabed = DbSeabed()
-        self._dataset = dbseabed.get_dataset(**conf)
+        self._dataset = dbseabed.get_data(**conf)
 
         self._output_var_names = (dbseabed.metadata["bmi_standard_name"],)
 
