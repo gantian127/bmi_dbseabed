@@ -70,7 +70,7 @@ for key, value in dbseabed.metadata.items():
 data.plot(figsize=(9, 5))
 plt.title("dbSEABED dataset (Carbonate in %)")
 ```
-![tif_plot](docs/source/_static/tif_plot.png)
+![tif_plot](docs/source/_static/ts_plot.png)
 
 
 #### Example 2: use BmiDbSseabed class to download data (Demonstration of how to use BMI)
