@@ -74,7 +74,7 @@ class DbSeabed:
         if local_file and os.path.isfile(output):
             # load local data
             dataset = rioxarray.open_rasterio(output)
-            # TODO: check if need dataset.close()
+
         else:
             # access and subset data from server
             ori_data = rioxarray.open_rasterio(DbSeabed.DATA_SERVICES[var_name]["link"])
