@@ -6,7 +6,7 @@
 
 bmi_dbseabed provides a set of functions that allow downloading of
 the dataset from [dbSEABED](https://instaar.colorado.edu/~jenkinsc/dbseabed/), 
-a system for marine substrates datasets across the US.
+a collection of marine substrates datasets across the US.
 
 bmi_dbseabed also includes a [Basic Model Interface (BMI)](https://bmi.readthedocs.io/en/latest/),
 which converts the dbSEABED datasets into a reusable,
@@ -54,10 +54,10 @@ from bmi_dbseabed import DbSeabed
 dbseabed = DbSeabed()
 data = dbseabed.get_data(
     var_name="carbonate",
-    west=-66.8,
-    south=18,
-    east=-66.2,
-    north=18.4,
+    west=-98.0,
+    south=18.0,
+    east=-80.1,
+    north=30.9,
     output="download.tif",
 )
 
