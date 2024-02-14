@@ -77,7 +77,7 @@ data.plot(figsize=(9, 5))
 plt.title("dbSEABED dataset (Carbonate in %)")
 ```
 
-```{image} _static/tif_plot.png
+```{image} _static/ts_plot.png
 ```
 
 **Example 2**: use BmiDbSeabed class to download data (Demonstration of how to use BMI).
