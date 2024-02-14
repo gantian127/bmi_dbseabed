@@ -590,10 +590,10 @@ class BmiDbSeabed(Bmi):
         else:
             conf = {
                 "var_name": "carbonate",
-                "west": -66.8,
+                "west": -98.0,
                 "south": 18.0,
-                "east": -66.2,
-                "north": 18.4,
+                "east": -80.1,
+                "north": 30.9,
                 "output": "download.tif",
             }
 
