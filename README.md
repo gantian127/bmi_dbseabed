@@ -5,7 +5,7 @@
 
 
 bmi_dbseabed provides a set of functions that allow downloading of
-the dataset from [dbSEABED](https://instaar.colorado.edu/~jenkinsc/dbseabed/), 
+the dataset from [dbSEABED](https://instaar.colorado.edu/~jenkinsc/dbseabed/),
 a collection of marine substrates datasets across the US.
 
 bmi_dbseabed also includes a [Basic Model Interface (BMI)](https://bmi.readthedocs.io/en/latest/),
@@ -40,8 +40,8 @@ $ pip install -e .
 ### Quick Start
 Below shows how to use two methods to download the datasets.
 
-You can learn more details from the [tutorial notebook](notebooks/bmi_dbseabe.ipynb). 
-To run this notebook, please go to the [CSDMS EKT Lab]() 
+You can learn more details from the [tutorial notebook](notebooks/bmi_dbseabe.ipynb).
+To run this notebook, please go to the [CSDMS EKT Lab]()
 and follow the instruction in the "Lab notes" section.
 
 #### Example 1: use DbSeabed class to download data (Recommended method)

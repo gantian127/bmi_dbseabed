@@ -3,8 +3,8 @@ from __future__ import annotations
 import os
 
 import pytest
-from click.testing import CliRunner
 from bmi_dbseabed.cli import main
+from click.testing import CliRunner
 
 
 def test_command_line_interface():

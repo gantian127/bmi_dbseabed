@@ -5,7 +5,7 @@
 :target: https://bmi_dbseabed.readthedocs.io/
 ```
 
-[bmi_dbseabed package][bmi_dbseabed-github] provides a set of functions that allow 
+[bmi_dbseabed package][bmi_dbseabed-github] provides a set of functions that allow
 downloading of the datasets from [dbSEABED][dbSEABED-website],
 a system for marine substrates datasets across the US.
 

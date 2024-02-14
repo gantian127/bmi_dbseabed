@@ -3,6 +3,7 @@ from __future__ import annotations
 import os
 
 import click
+
 from ._version import __version__
 from .dbseabed import DbSeabed
 

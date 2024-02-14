@@ -4,8 +4,8 @@ from collections import namedtuple
 
 import numpy
 import yaml
-from bmipy import Bmi
 from bmi_dbseabed.dbseabed import DbSeabed
+from bmipy import Bmi
 
 BmiVar = namedtuple(
     "BmiVar", ["dtype", "itemsize", "nbytes", "units", "location", "grid"]
