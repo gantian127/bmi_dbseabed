@@ -15,7 +15,8 @@ class DbSeabed:
         },
         "carbonate": {
             "name": "ocean_carbonate",
-            "link": "https://files.isric.org/soilgrids/former/2017-03-10/data/BDRICM_M_250m_ll.tif",
+            "link": "https://files.isric.org/soilgrids/former/"
+            "2017-03-10/data/BDRICM_M_250m_ll.tif",
             "units": "%",
         },
         "grainsize": {
@@ -79,14 +80,13 @@ class DbSeabed:
     def get_data(
         self,
         var_name,
-        west=-66.8,
-        south=18.0,
-        east=-66.2,
-        north=18.4,
-        output='carbonate.tif',
+        west,
+        south,
+        east,
+        north,
+        output,
         local_file=False,
-    ):  # TODO: change the parameters as required.
-
+    ):
         # TODO: add docstrings
         # check var_name
         if var_name not in DbSeabed.DATA_SERVICES.keys():
@@ -132,7 +132,7 @@ class DbSeabed:
         grid_res = [abs(geotrans[1]), abs(geotrans[5])]
 
         # get crs
-        crs_wkt = dataset['spatial_ref'].attrs['spatial_ref']
+        crs_wkt = dataset["spatial_ref"].attrs["spatial_ref"]
 
         # store metadata
         self._tif_file = (
