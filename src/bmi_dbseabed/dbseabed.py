@@ -3,17 +3,51 @@ from __future__ import annotations
 import os
 
 import rioxarray
-from owslib.wcs import WebCoverageService
 
 
 class DbSeabed:
-    # TODO update the dict to add actural var info
+    # TODO update the dict to add correct bmi names and links and units
     DATA_SERVICES = {
+        "bathy": {
+            "name": "ocean_bathymetry ",
+            "link": "https://",
+            "units": "meter",
+        },
         "carbonate": {
             "name": "ocean_carbonate",
             "link": "https://files.isric.org/soilgrids/former/2017-03-10/data/BDRICM_M_250m_ll.tif",
             "units": "%",
-        }
+        },
+        "grainsize": {
+            "name": "grain_size",
+            "link": "https://",
+            "units": "",
+        },
+        "gravel": {
+            "name": "gravel_content",
+            "link": "https://",
+            "units": "%",
+        },
+        "mud": {
+            "name": "mud_content",
+            "link": "https://",
+            "units": "%",
+        },
+        "organic_carbon": {
+            "name": "organic_carbon_content",
+            "link": "https://",
+            "units": "%",
+        },
+        "rock": {
+            "name": "rock_content",
+            "link": "https://",
+            "units": "%",
+        },
+        "sand": {
+            "name": "sand_content",
+            "link": "https://",
+            "units": "%",
+        },
     }
 
     def __init__(self):
@@ -34,10 +68,10 @@ class DbSeabed:
         for key, value in DbSeabed.DATA_SERVICES.items():
             string_list.extend(
                 [
-                    f"variable name: {key}",
-                    f"Bmi standard name: {value['name']}",
-                    f"variable units: {value['units']}",
-                    f"data link: {value['link']}",
+                    f"Variable name: {key}",
+                    f"Variable units: {value['units']}",
+                    f"BMI standard name: {value['name']}",
+                    f"Data link: {value['link']}\n",
                 ]
             )
         print(os.linesep.join(string_list))
