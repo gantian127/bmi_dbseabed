@@ -58,10 +58,10 @@ from bmi_dbseabed import DbSeabed
 dbseabed = DbSeabed()
 data = dbseabed.get_data(
     var_name="carbonate",
-    west=-98.0,
-    south=18.0,
-    east=-80.1,
-    north=30.9,
+    west=-97.95,
+    south=18.05,
+    east=-80.05,
+    north=30.95,
     output="download.tif",
 )
 
