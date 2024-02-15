@@ -6,7 +6,11 @@
 
 bmi_dbseabed provides a set of functions that allow downloading of
 the dataset from [dbSEABED](https://instaar.colorado.edu/~jenkinsc/dbseabed/),
-a collection of marine substrates datasets across the US.
+a system for marine substrates datasets across the globe. 
+This system uses very large amounts of diverse observational data and 
+applies math methods to integrate/harmonize those
+and produces gridded data on the major properties of the seabed.
+The scope is the global ocean and across all depth zones.
 
 bmi_dbseabed also includes a [Basic Model Interface (BMI)](https://bmi.readthedocs.io/en/latest/),
 which converts the dbSEABED datasets into a reusable,

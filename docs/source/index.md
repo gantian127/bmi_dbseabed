@@ -1,13 +1,17 @@
 ```{image} _static/bmi_dbseabed_logo.png
 :align: center
 :alt: bmi_dbseabed
-:scale: 22%
+:scale: 20%
 :target: https://bmi_dbseabed.readthedocs.io/
 ```
 
 [bmi_dbseabed package][bmi_dbseabed-github] provides a set of functions that allow
 downloading of the datasets from [dbSEABED][dbSEABED-website],
-a system for marine substrates datasets across the US.
+a system for marine substrates datasets across the globe. 
+This system uses very large amounts of diverse observational data and 
+applies math methods to integrate/harmonize those
+and produces gridded data on the major properties of the seabed.
+The scope is the global ocean and across all depth zones.
 
 bmi_dbseabed package includes a [Basic Model Interface (BMI)][bmi-docs],
 which converts the bmi_dbseabed dataset into a reusable,
