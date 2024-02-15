@@ -6,8 +6,8 @@
 
 bmi_dbseabed provides a set of functions that allow downloading of
 the dataset from [dbSEABED](https://instaar.colorado.edu/~jenkinsc/dbseabed/),
-a system for marine substrates datasets across the globe. 
-This system uses very large amounts of diverse observational data and 
+a system for marine substrates datasets across the globe.
+This system uses very large amounts of diverse observational data and
 applies math methods to integrate/harmonize those
 and produces gridded data on the major properties of the seabed.
 The scope is the global ocean and across all depth zones.
