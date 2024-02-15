@@ -159,12 +159,18 @@ data_comp.finalize()
 
 "get_data()" method includes multiple parameters for data download. Details for each parameter are listed below.
 
-- **var_name**: The identifier of each map service provided by the bmi_dbseabed system. The supported service id and the
-  corresponding variable names are shown below. The "data_services" attribute of an instance will show more
+- **var_name**: The identifier of each data service provided by the dbSEABED system. The supported identifiers and the
+  corresponding BMI standard names are shown below (var_name: BMI standard name). The "data_services" attribute of an instance will show more
   detailed information.
 
-  - carbonate: Ocean Carbonate
-  - mud: Mud Content
+  - bathy: seafloor__bathymetry
+  - carbonate: surficial_seafloor_carbonate__content
+  - grainsize: surficial_seafloor_sediment__grainsize
+  - gravel: surficial_seafloor_sediment_gravel__content
+  - mud: surficial_seafloor_sediment_mud__content
+  - organic_carbon: surficial_seafloor_sediment_organic_carbon__content
+  - rock: surficial_seafloor_exposed_rock__content
+  - sand: surficial_seafloor_sediment_sand__content
 
 - **west, south, east, north**: The bounding box values for the downloaded data. These values should be based on the
   coordinate system (EPSG: 4326) of the datasets from dbSEABED. The west and south values are for the point on the lower left corner
@@ -172,10 +178,10 @@ data_comp.finalize()
 
 - **output**: The file path of the GeoTiff file to store the downloaded data with ".tif" file extension.
 
-- **local_file**: indicate whether to make it priority to get the data by loading a local file that matches with the
-  output file path. Default value is set as False, which means the function will directly download the data from bmi_dbseabed
+- **local_file**: Indicate whether to make it priority to get the data by loading a local file that matches with the
+  output file path. Default value is set as False, which means the function will directly download the data from dbSEABED
   system. If value is set as True, the function will first try to open a local file that matches with
-  the output file path. And if the local file doesn't exist, it will then download data from bmi_dbseabed.
+  the output file path. And if the local file doesn't exist, it will then download data from dbSEABED.
 
 <!-- links -->
 [bmi-docs]: https://bmi.readthedocs.io
