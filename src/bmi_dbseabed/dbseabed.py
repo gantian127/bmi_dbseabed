@@ -9,45 +9,45 @@ class DbSeabed:
     # TODO update the dict to add correct bmi names and links and units
     DATA_SERVICES = {
         "bathy": {
-            "name": "ocean_bathymetry ",
+            "name": "seafloor__bathymetry ",
             "link": "https://",
-            "units": "meter",
+            "units": "metres",
         },
         "carbonate": {
-            "name": "ocean_carbonate",
+            "name": "surficial_seafloor_carbonate__content ",
             "link": "https://files.isric.org/soilgrids/former/"
             "2017-03-10/data/BDRICM_M_250m_ll.tif",
-            "units": "%",
+            "units": "percent",
         },
         "grainsize": {
-            "name": "grain_size",
+            "name": "surficial_seafloor_sediment__grainsize",
             "link": "https://",
-            "units": "",
+            "units": "phi",
         },
         "gravel": {
-            "name": "gravel_content",
+            "name": "surficial_seafloor_sediment_gravel__content",
             "link": "https://",
-            "units": "%",
+            "units": "percent",
         },
         "mud": {
-            "name": "mud_content",
+            "name": "surficial_seafloor_sediment_mud__content",
             "link": "https://",
-            "units": "%",
+            "units": "percent",
         },
         "organic_carbon": {
-            "name": "organic_carbon_content",
+            "name": "surficial_seafloor_sediment_organic_carbon__content",
             "link": "https://",
-            "units": "%",
+            "units": "percent",
         },
         "rock": {
-            "name": "rock_content",
+            "name": "surficial_seafloor_exposed_rock__content",
             "link": "https://",
-            "units": "%",
+            "units": "percent",
         },
         "sand": {
-            "name": "sand_content",
+            "name": "surficial_seafloor_sediment_sand__content",
             "link": "https://",
-            "units": "%",
+            "units": "percent",
         },
     }
 
@@ -146,7 +146,8 @@ class DbSeabed:
             "variable_units": DbSeabed.DATA_SERVICES[var_name]["units"],
             "service_url": DbSeabed.DATA_SERVICES[var_name]["link"],
             "crs_wkt": crs_wkt,
-            "bounding_box": [west, north, east, south],
+            "node_bounding_box": [west, north, east, south],
+            "grid_bounding_box": [round(value, 5) for value in dataset.rio.bounds()],
             "grid_res": grid_res,
         }
 
