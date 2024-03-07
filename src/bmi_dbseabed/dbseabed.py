@@ -9,7 +9,7 @@ class DbSeabed:
     # TODO update the dict to add correct bmi names and links and units
     DATA_SERVICES = {
         "bathy": {
-            "name": "seafloor__bathymetry ",
+            "name": "seafloor__water_depth ",
             "link": "https://",
             "units": "metres",
         },
@@ -19,8 +19,18 @@ class DbSeabed:
             "2017-03-10/data/BDRICM_M_250m_ll.tif",
             "units": "percent",
         },
+        "carbonate_unctn": {
+            "name": "surficial_seafloor_carbonate__content_uncertainty ",
+            "link": "https://",
+            "units": "percent",
+        },
         "grainsize": {
             "name": "surficial_seafloor_sediment__grainsize",
+            "link": "https://",
+            "units": "phi",
+        },
+        "grainsize_unctn": {
+            "name": "surficial_seafloor_sediment__grainsize_uncertainty",
             "link": "https://",
             "units": "phi",
         },
@@ -29,8 +39,18 @@ class DbSeabed:
             "link": "https://",
             "units": "percent",
         },
+        "gravel_unctn": {
+            "name": "surficial_seafloor_sediment_gravel__content_uncertainty",
+            "link": "https://",
+            "units": "percent",
+        },
         "mud": {
             "name": "surficial_seafloor_sediment_mud__content",
+            "link": "https://",
+            "units": "percent",
+        },
+        "mud_unctn": {
+            "name": "surficial_seafloor_sediment_mud__content_uncertainty",
             "link": "https://",
             "units": "percent",
         },
@@ -39,13 +59,28 @@ class DbSeabed:
             "link": "https://",
             "units": "percent",
         },
+        "organic_carbon_unctn": {
+            "name": "surficial_seafloor_sediment_organic_carbon__content_uncertainty",
+            "link": "https://",
+            "units": "percent",
+        },
         "rock": {
             "name": "surficial_seafloor_exposed_rock__content",
             "link": "https://",
             "units": "percent",
         },
+        "rock_unctn": {
+            "name": "surficial_seafloor_exposed_rock__content_uncertainty",
+            "link": "https://",
+            "units": "percent",
+        },
         "sand": {
             "name": "surficial_seafloor_sediment_sand__content",
+            "link": "https://",
+            "units": "percent",
+        },
+        "sand_unctn": {
+            "name": "surficial_seafloor_sediment_sand__content_uncertainty",
             "link": "https://",
             "units": "percent",
         },
