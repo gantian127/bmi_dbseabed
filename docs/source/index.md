@@ -64,10 +64,10 @@ from bmi_dbseabed import DbSeabed
 dbseabed = DbSeabed()
 data = dbseabed.get_data(
     var_name="carbonate",
-    west=-97.95,
-    south=18.05,
-    east=-80.05,
-    north=30.95,
+    west=-98,
+    south=18,
+    east=-80,
+    north=31,
     output="download.tif",
 )
 
@@ -163,7 +163,6 @@ data_comp.finalize()
   corresponding BMI standard names are shown below (var_name: BMI standard name). The "data_services" attribute of an instance will show more
   detailed information.
 
-  - bathy: seafloor__bathymetry
   - carbonate: surficial_seafloor_carbonate__content
   - grainsize: surficial_seafloor_sediment__grainsize
   - gravel: surficial_seafloor_sediment_gravel__content
@@ -172,9 +171,9 @@ data_comp.finalize()
   - rock: surficial_seafloor_exposed_rock__content
   - sand: surficial_seafloor_sediment_sand__content
 
-- **west, south, east, north**: The bounding box values for the downloaded data. These values should be based on the
-  coordinate system (EPSG: 4326) of the datasets from dbSEABED. The west and south values are for the point on the lower left corner
-  of the bounding box. The east and north values are for the point on the upper right corner of the bounding box.
+- **west, south, east, north**: The bounding box (extent) values for the downloaded data. These values should be based on the
+  coordinate system (EPSG: 4326) of the datasets from dbSEABED. The west and south values are for the lower left corner
+  of the grid extent. The east and north values are for the upper right corner of the grid extent.
 
 - **output**: The file path of the GeoTiff file to store the downloaded data with ".tif" file extension.
 
