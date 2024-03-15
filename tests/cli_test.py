@@ -7,21 +7,23 @@ from bmi_dbseabed.cli import main
 from click.testing import CliRunner
 
 
-def test_command_line_interface():
-    runner = CliRunner()
-    result = runner.invoke(main, ["--help"])
+@pytest.fixture
+def cli_runner():
+    return CliRunner()
+
+
+def test_command_line_interface(cli_runner):
+    result = cli_runner.invoke(main, ["--help"])
     assert result.exit_code == 0
     assert "Usage:" in result.output
 
-    result = runner.invoke(main, ["--version"])
+    result = cli_runner.invoke(main, ["--version"])
     assert result.exit_code == 0
     assert "version" in result.output
 
 
-def test_output(tmpdir):
-    runner = CliRunner()
-
-    result = runner.invoke(
+def test_output(cli_runner, tmpdir):
+    result = cli_runner.invoke(
         main,
         [
             "--var_name=carbonate",
@@ -32,9 +34,8 @@ def test_output(tmpdir):
     assert result.exit_code != 0
 
 
-def test_var_name():
-    runner = CliRunner()
-    result = runner.invoke(
+def test_var_name(cli_runner):
+    result = cli_runner.invoke(
         main,
         [
             "--var_name=error",
@@ -45,9 +46,8 @@ def test_var_name():
     assert result.exit_code != 0
 
 
-def test_bbox():
-    runner = CliRunner()
-    result = runner.invoke(
+def test_bbox(cli_runner):
+    result = cli_runner.invoke(
         main,
         [
             "--var_name=carbonate",
@@ -59,14 +59,13 @@ def test_bbox():
 
 
 @pytest.mark.filterwarnings("ignore:numpy.ufunc size")
-def test_data_download(tmpdir):
-    runner = CliRunner()
+def test_data_download(cli_runner, tmpdir):
     with tmpdir.as_cwd():
-        result = runner.invoke(
+        result = cli_runner.invoke(
             main,
             [
                 "--var_name=carbonate",
-                "--bbox=-66.8,18,-66.2,18.4",
+                "--bbox=-98,18,-80,31",
                 "test.tif",
             ],
         )
