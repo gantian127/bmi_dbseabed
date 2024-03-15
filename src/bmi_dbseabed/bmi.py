@@ -592,8 +592,8 @@ class BmiDbSeabed(Bmi):
                 "var_name": "carbonate",
                 "west": -98.0,
                 "south": 18.0,
-                "east": -80.1,
-                "north": 30.9,
+                "east": -80.0,
+                "north": 31.0,
                 "output": "download.tif",
             }
 
