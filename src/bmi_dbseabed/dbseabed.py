@@ -6,82 +6,81 @@ import rioxarray
 
 
 class DbSeabed:
-    # TODO update the dict to add correct bmi names and links and units
+    # TODO update bmi names
     DATA_SERVICES = {
-        "bathy": {
-            "name": "seafloor__water_depth ",
-            "link": "https://",
-            "units": "metres",
-        },
+        # "bathy": {
+        #     "name": "seafloor__water_depth ",
+        #     "link": "https://",
+        #     "units": "metres",
+        # }, # TODO add bathymetry data link
         "carbonate": {
             "name": "surficial_seafloor_carbonate__content ",
-            "link": "https://files.isric.org/soilgrids/former/"
-            "2017-03-10/data/BDRICM_M_250m_ll.tif",
+            "link": "https://csdms.colorado.edu/pub/data/dbSEABED/gomex_crb_idw3d.tif",
             "units": "percent",
         },
-        "carbonate_unctn": {
+        "carbonate_totlsu": {
             "name": "surficial_seafloor_carbonate__content_uncertainty ",
-            "link": "https://",
+            "link": "https://csdms.colorado.edu/pub/data/dbSEABED/gomex_crb_idw3d_TotlSU.tif",
             "units": "percent",
         },
         "grainsize": {
             "name": "surficial_seafloor_sediment__grainsize",
-            "link": "https://",
+            "link": "https://csdms.colorado.edu/pub/data/dbSEABED/gomex_grz_idw3d.tif",
             "units": "phi",
         },
-        "grainsize_unctn": {
+        "grainsize_totlsu": {
             "name": "surficial_seafloor_sediment__grainsize_uncertainty",
-            "link": "https://",
+            "link": "https://csdms.colorado.edu/pub/data/dbSEABED/gomex_grz_idw3d_TotlSU.tif",
             "units": "phi",
         },
         "gravel": {
             "name": "surficial_seafloor_sediment_gravel__content",
-            "link": "https://",
+            "link": "https://csdms.colorado.edu/pub/data/dbSEABED/gomex_codaGVL_idw3d.tif",
             "units": "percent",
         },
-        "gravel_unctn": {
+        "gravel_totlsu": {
             "name": "surficial_seafloor_sediment_gravel__content_uncertainty",
-            "link": "https://",
+            "link": "https://csdms.colorado.edu/pub/data/dbSEABED/gomex_codaGVL_TotlSU.tif",
             "units": "percent",
         },
         "mud": {
             "name": "surficial_seafloor_sediment_mud__content",
-            "link": "https://",
+            "link": "https://csdms.colorado.edu/pub/data/dbSEABED/gomex_codaMUD_idw3d.tif",
             "units": "percent",
         },
-        "mud_unctn": {
+        "mud_totlsu": {
             "name": "surficial_seafloor_sediment_mud__content_uncertainty",
-            "link": "https://",
+            "link": "https://csdms.colorado.edu/pub/data/dbSEABED/gomex_codaMUD_TotlSU.tif",
             "units": "percent",
         },
         "organic_carbon": {
             "name": "surficial_seafloor_sediment_organic_carbon__content",
-            "link": "https://",
+            "link": "https://csdms.colorado.edu/pub/data/dbSEABED/gomex_ocbn_idw3d.tif",
             "units": "percent",
         },
-        "organic_carbon_unctn": {
+        "organic_carbon_totlsu": {
             "name": "surficial_seafloor_sediment_organic_carbon__content_uncertainty",
-            "link": "https://",
+            "link": "https://csdms.colorado.edu/pub/data/dbSEABED/gomex_ocbn_idw3d_TotlSU.tif",
             "units": "percent",
         },
         "rock": {
             "name": "surficial_seafloor_exposed_rock__content",
-            "link": "https://",
+            "link": "https://csdms.colorado.edu/pub/data/dbSEABED/gomex_rck_idw3d.tif",
             "units": "percent",
         },
-        "rock_unctn": {
+        "rock_totlsu": {
             "name": "surficial_seafloor_exposed_rock__content_uncertainty",
-            "link": "https://",
+            "link": "https://csdms.colorado.edu/pub/data/dbSEABED/gomex_rck_idw3d_TotlSU.tif",
             "units": "percent",
         },
         "sand": {
             "name": "surficial_seafloor_sediment_sand__content",
-            "link": "https://",
+            "link": "https://csdms.colorado.edu/pub/data/dbSEABED/gomex_codaSND_idw3d.tif",
             "units": "percent",
         },
-        "sand_unctn": {
+        "sand_totlsu": {
             "name": "surficial_seafloor_sediment_sand__content_uncertainty",
-            "link": "https://",
+            "link": "https://csdms.colorado.edu/pub/data/dbSEABED/gomex_codaSND_TotlSU.tif",
             "units": "percent",
         },
     }
@@ -100,6 +99,7 @@ class DbSeabed:
 
     @property
     def data_services(self):
+        # Print data services information
         string_list = []
         for key, value in DbSeabed.DATA_SERVICES.items():
             string_list.extend(
@@ -122,7 +122,22 @@ class DbSeabed:
         output,
         local_file=False,
     ):
-        # TODO: add docstrings
+        """
+        Get data from the remote server.
+
+        Args:
+            var_name: Variable name for dbSEABED datasets.
+            west: x coordinate of the lower left corner of the grid extent.
+            south: y coordinate of the lower left corner of the grid extent.
+            east: x coordinate of the upper right corner of the grid extent.
+            north: y coordinate of the upper right corner of the grid extent.
+            output: Output file path.
+            local_file: If True, load the local file without data download.
+
+        Returns:
+            rioxarray.Dataset: Dataset containing the dbSEABED dataset.
+        """
+
         # check var_name
         if var_name not in DbSeabed.DATA_SERVICES.keys():
             raise ValueError("Please provide a valid var_name value.")
@@ -135,18 +150,20 @@ class DbSeabed:
             )
 
         # check output
-        if output[-4::] != ".tif":
+        if not output.endswith(".tif"):
             raise ValueError(
                 "Please provide a valid output file name with .tif extension."
             )
 
         if local_file and os.path.isfile(output):
             # load local data
-            dataset = rioxarray.open_rasterio(output)
+            dataset = rioxarray.open_rasterio(output, masked=True)
 
         else:
             # access and subset data from server
-            ori_data = rioxarray.open_rasterio(DbSeabed.DATA_SERVICES[var_name]["link"])
+            ori_data = rioxarray.open_rasterio(
+                DbSeabed.DATA_SERVICES[var_name]["link"], masked=True
+            )
             dataset = ori_data.rio.clip_box(
                 minx=west,
                 miny=south,
@@ -155,9 +172,12 @@ class DbSeabed:
             )
 
             # save the data as geotiff
-            dataset.rio.to_raster(raster_path=output, driver="GTiff")
-
-        dataset.close()
+            dataset.rio.to_raster(
+                raster_path=output,
+                driver="GTiff",
+                # dtype="float64",
+                recalc_transform=False,
+            )
 
         # get resolution
         geotrans = [
@@ -181,8 +201,13 @@ class DbSeabed:
             "variable_units": DbSeabed.DATA_SERVICES[var_name]["units"],
             "service_url": DbSeabed.DATA_SERVICES[var_name]["link"],
             "crs_wkt": crs_wkt,
-            "node_bounding_box": [west, north, east, south],
-            "grid_bounding_box": [round(value, 5) for value in dataset.rio.bounds()],
+            "node_bounding_box": [
+                dataset.x.values[0],
+                dataset.y.values[0],
+                dataset.x.values[-1],
+                dataset.y.values[-1],
+            ],
+            "grid_bounding_box": dataset.rio.bounds(),
             "grid_res": grid_res,
         }
 
