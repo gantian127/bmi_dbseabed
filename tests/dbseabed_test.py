@@ -74,19 +74,18 @@ def test_invalid_output(dbseabed_instance):
 )
 @pytest.mark.filterwarnings("ignore:numpy.ufunc size")
 def test_data_download(var_name, tmpdir):
-    var_name_list = []
-    for var_name in var_name_list:
-        data = DbSeabed().get_data(
-            var_name=var_name,
-            west=-98,
-            south=18.0,
-            east=-80,
-            north=31,
-            output=os.path.join(tmpdir, "test.tif"),
-        )
+    output_name = os.path.join(tmpdir, f"{var_name}.tif")
+    data = DbSeabed().get_data(
+        var_name=var_name,
+        west=-98,
+        south=18.0,
+        east=-80,
+        north=31,
+        output=output_name,
+    )
 
-        assert isinstance(data, xarray.core.dataarray.DataArray)
-        assert len(os.listdir(tmpdir)) == 1
+    assert isinstance(data, xarray.core.dataarray.DataArray)
+    assert os.path.isfile(output_name) is True
 
 
 # test loading local file
