@@ -8,78 +8,73 @@ import rioxarray
 class DbSeabed:
     # TODO update bmi names
     DATA_SERVICES = {
-        # "bathy": {
-        #     "name": "seafloor__water_depth ",
-        #     "link": "https://",
-        #     "units": "metres",
-        # }, # TODO add bathymetry data link
         "carbonate": {
-            "name": "surficial_seafloor_carbonate__content ",
+            "name": "surficial_seafloor_carbonate__fraction",
             "link": "https://csdms.colorado.edu/pub/data/dbSEABED/gomex_crb_idw3d.tif",
             "units": "percent",
         },
         "carbonate_totlsu": {
-            "name": "surficial_seafloor_carbonate__content_uncertainty ",
+            "name": "surficial_seafloor_carbonate__fraction_uncertainty",
             "link": "https://csdms.colorado.edu/pub/data/dbSEABED/gomex_crb_idw3d_TotlSU.tif",
             "units": "percent",
         },
         "grainsize": {
-            "name": "surficial_seafloor_sediment__grainsize",
+            "name": "surficial_seafloor_sediment__grain-size",
             "link": "https://csdms.colorado.edu/pub/data/dbSEABED/gomex_grz_idw3d.tif",
             "units": "phi",
         },
         "grainsize_totlsu": {
-            "name": "surficial_seafloor_sediment__grainsize_uncertainty",
+            "name": "surficial_seafloor_sediment__grain-size_uncertainty",
             "link": "https://csdms.colorado.edu/pub/data/dbSEABED/gomex_grz_idw3d_TotlSU.tif",
             "units": "phi",
         },
         "gravel": {
-            "name": "surficial_seafloor_sediment_gravel__content",
+            "name": "surficial_seafloor_sediment_gravel__fraction",
             "link": "https://csdms.colorado.edu/pub/data/dbSEABED/gomex_codaGVL_idw3d.tif",
             "units": "percent",
         },
         "gravel_totlsu": {
-            "name": "surficial_seafloor_sediment_gravel__content_uncertainty",
+            "name": "surficial_seafloor_sediment_gravel__fraction_uncertainty",
             "link": "https://csdms.colorado.edu/pub/data/dbSEABED/gomex_codaGVL_TotlSU.tif",
             "units": "percent",
         },
         "mud": {
-            "name": "surficial_seafloor_sediment_mud__content",
+            "name": "surficial_seafloor_sediment_mud__fraction",
             "link": "https://csdms.colorado.edu/pub/data/dbSEABED/gomex_codaMUD_idw3d.tif",
             "units": "percent",
         },
         "mud_totlsu": {
-            "name": "surficial_seafloor_sediment_mud__content_uncertainty",
+            "name": "surficial_seafloor_sediment_mud__fraction_uncertainty",
             "link": "https://csdms.colorado.edu/pub/data/dbSEABED/gomex_codaMUD_TotlSU.tif",
             "units": "percent",
         },
         "organic_carbon": {
-            "name": "surficial_seafloor_sediment_organic_carbon__content",
+            "name": "surficial_seafloor_sediment_organic-carbon__fraction",
             "link": "https://csdms.colorado.edu/pub/data/dbSEABED/gomex_ocbn_idw3d.tif",
             "units": "percent",
         },
         "organic_carbon_totlsu": {
-            "name": "surficial_seafloor_sediment_organic_carbon__content_uncertainty",
+            "name": "surficial_seafloor_sediment_organic-carbon__fraction_uncertainty",
             "link": "https://csdms.colorado.edu/pub/data/dbSEABED/gomex_ocbn_idw3d_TotlSU.tif",
             "units": "percent",
         },
         "rock": {
-            "name": "surficial_seafloor_exposed_rock__content",
+            "name": "surficial_seafloor_rock~exposed__fraction",
             "link": "https://csdms.colorado.edu/pub/data/dbSEABED/gomex_rck_idw3d.tif",
             "units": "percent",
         },
         "rock_totlsu": {
-            "name": "surficial_seafloor_exposed_rock__content_uncertainty",
+            "name": "surficial_seafloor_rock~exposed__fraction_uncertainty",
             "link": "https://csdms.colorado.edu/pub/data/dbSEABED/gomex_rck_idw3d_TotlSU.tif",
             "units": "percent",
         },
         "sand": {
-            "name": "surficial_seafloor_sediment_sand__content",
+            "name": "surficial_seafloor_sediment_sand__fraction",
             "link": "https://csdms.colorado.edu/pub/data/dbSEABED/gomex_codaSND_idw3d.tif",
             "units": "percent",
         },
         "sand_totlsu": {
-            "name": "surficial_seafloor_sediment_sand__content_uncertainty",
+            "name": "surficial_seafloor_sediment_sand__fraction_uncertainty",
             "link": "https://csdms.colorado.edu/pub/data/dbSEABED/gomex_codaSND_TotlSU.tif",
             "units": "percent",
         },
