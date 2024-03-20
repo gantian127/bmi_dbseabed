@@ -166,20 +166,20 @@ data_comp.finalize()
   corresponding BMI standard names are shown below (var_name: BMI standard name). The "data_services" attribute of an instance will show more
   information for each identifier such as url link and variable unit for each dataset.
 
-  - carbonate: surficial_seafloor_carbonate__fraction
-  - carbonate_totlsu: surficial_seafloor_carbonate__fraction_uncertainty
-  - grainsize: surficial_seafloor_sediment__grain-size
-  - grainsize_totlsu: surficial_seafloor_sediment__grain-size_uncertainty
-  - gravel: surficial_seafloor_sediment_gravel__fraction
-  - gravel_totlsu: surficial_seafloor_sediment_gravel__fraction_uncertainty
-  - mud: surficial_seafloor_sediment_mud__fraction
-  - mud_totlsu: surficial_seafloor_sediment_mud__fraction_uncertainty
-  - organic_carbon: surficial_seafloor_sediment_organic-carbon__fraction
-  - organic_carbon_totlsu: surficial_seafloor_sediment_organic-carbon__fraction_uncertainty
-  - rock: surficial_seafloor_rock~exposed__fraction
-  - rock_totlsu: surficial_seafloor_rock~exposed__fraction_uncertainty
-  - sand: surficial_seafloor_sediment_sand__fraction
-  - sand_totlsu: surficial_seafloor_sediment_sand__fraction_uncertainty
+  - **carbonate**: surficial_seafloor_carbonate__fraction
+  - **carbonate_totlsu**: surficial_seafloor_carbonate__fraction_uncertainty
+  - **grainsize**: surficial_seafloor_sediment__grain-size
+  - **grainsize_totlsu**: surficial_seafloor_sediment__grain-size_uncertainty
+  - **gravel**: surficial_seafloor_sediment_gravel__fraction
+  - **gravel_totlsu**: surficial_seafloor_sediment_gravel__fraction_uncertainty
+  - **mud**: surficial_seafloor_sediment_mud__fraction
+  - **mud_totlsu**: surficial_seafloor_sediment_mud__fraction_uncertainty
+  - **organic_carbon**: surficial_seafloor_sediment_organic-carbon__fraction
+  - **organic_carbon_totlsu**: surficial_seafloor_sediment_organic-carbon__fraction_uncertainty
+  - **rock**: surficial_seafloor_rock~exposed__fraction
+  - **rock_totlsu**: surficial_seafloor_rock~exposed__fraction_uncertainty
+  - **sand**: surficial_seafloor_sediment_sand__fraction
+  - **sand_totlsu**: surficial_seafloor_sediment_sand__fraction_uncertainty
 
 - **west, south, east, north**: The bounding box (extent) values for the downloaded data. These values should be based on the
   coordinate system (EPSG: 4326) of the datasets from dbSEABED. The west and south values are for the lower left corner
