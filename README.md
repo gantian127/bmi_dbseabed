@@ -10,10 +10,10 @@ a system for marine substrates datasets across the globe.
 This system uses very large amounts of diverse observational data and
 applies math methods to integrate/harmonize those
 and produces gridded data on the major properties of the seabed.
-The scope is the global ocean and across all depth zones. 
+The scope is the global ocean and across all depth zones.
 
-The current page serves only the data for the Gulf of Mexico region. Please note that 
-the data will be updated from time to time, approximately annually. 
+The current page serves only the data for the Gulf of Mexico region. Please note that
+the data will be updated from time to time, approximately annually.
 
 bmi_dbseabed also includes a [Basic Model Interface (BMI)](https://bmi.readthedocs.io/en/latest/),
 which converts the dbSEABED datasets into a reusable,
@@ -61,7 +61,7 @@ from bmi_dbseabed import DbSeabed
 dbseabed = DbSeabed()
 data = dbseabed.get_data(
     var_name="carbonate",
-    west=-98,n
+    west=-98,
     south=18,
     east=-80,
     north=31,

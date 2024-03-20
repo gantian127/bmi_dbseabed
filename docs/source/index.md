@@ -13,8 +13,8 @@ applies math methods to integrate/harmonize those
 and produces gridded data on the major properties of the seabed.
 The scope is the global ocean and across all depth zones.
 
-The current page serves only the data for the Gulf of Mexico region. Please note that 
-the data will be updated from time to time, approximately annually. 
+The current page serves only the data for the Gulf of Mexico region. Please note that
+the data will be updated from time to time, approximately annually.
 
 bmi_dbseabed package includes a [Basic Model Interface (BMI)][bmi-docs],
 which converts the bmi_dbseabed dataset into a reusable,
@@ -162,17 +162,24 @@ data_comp.finalize()
 
 "get_data()" method includes multiple parameters for data download. Details for each parameter are listed below.
 
-- **var_name**: The identifier of each data service provided by the dbSEABED system. The supported identifiers and the
+- **var_name**: The identifier of each dataset provided by dbSEABED. The identifiers and the
   corresponding BMI standard names are shown below (var_name: BMI standard name). The "data_services" attribute of an instance will show more
-  detailed information.
+  information for each identifier such as url link and variable unit for each dataset.
 
-  - carbonate: surficial_seafloor_carbonate__content
-  - grainsize: surficial_seafloor_sediment__grainsize
-  - gravel: surficial_seafloor_sediment_gravel__content
-  - mud: surficial_seafloor_sediment_mud__content
-  - organic_carbon: surficial_seafloor_sediment_organic_carbon__content
-  - rock: surficial_seafloor_exposed_rock__content
-  - sand: surficial_seafloor_sediment_sand__content
+  - carbonate: surficial_seafloor_carbonate__fraction
+  - carbonate_totlsu: surficial_seafloor_carbonate__fraction_uncertainty
+  - grainsize: surficial_seafloor_sediment__grain-size
+  - grainsize_totlsu: surficial_seafloor_sediment__grain-size_uncertainty
+  - gravel: surficial_seafloor_sediment_gravel__fraction
+  - gravel_totlsu: surficial_seafloor_sediment_gravel__fraction_uncertainty
+  - mud: surficial_seafloor_sediment_mud__fraction
+  - mud_totlsu: surficial_seafloor_sediment_mud__fraction_uncertainty
+  - organic_carbon: surficial_seafloor_sediment_organic-carbon__fraction
+  - organic_carbon_totlsu: surficial_seafloor_sediment_organic-carbon__fraction_uncertainty
+  - rock: surficial_seafloor_rock~exposed__fraction
+  - rock_totlsu: surficial_seafloor_rock~exposed__fraction_uncertainty
+  - sand: surficial_seafloor_sediment_sand__fraction
+  - sand_totlsu: surficial_seafloor_sediment_sand__fraction_uncertainty
 
 - **west, south, east, north**: The bounding box (extent) values for the downloaded data. These values should be based on the
   coordinate system (EPSG: 4326) of the datasets from dbSEABED. The west and south values are for the lower left corner
