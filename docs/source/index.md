@@ -13,6 +13,9 @@ applies math methods to integrate/harmonize those
 and produces gridded data on the major properties of the seabed.
 The scope is the global ocean and across all depth zones.
 
+The current page serves only the data for the Gulf of Mexico region. Please note that 
+the data will be updated from time to time, approximately annually. 
+
 bmi_dbseabed package includes a [Basic Model Interface (BMI)][bmi-docs],
 which converts the bmi_dbseabed dataset into a reusable,
 plug-and-play data component ([pymt_dbseabed][bmi_dbseabed-pymt]) for
