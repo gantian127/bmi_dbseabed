@@ -170,7 +170,6 @@ class DbSeabed:
             dataset.rio.to_raster(
                 raster_path=output,
                 driver="GTiff",
-                # dtype="float64",
                 recalc_transform=False,
             )
 
@@ -179,7 +178,7 @@ class DbSeabed:
             float(value)
             for value in dataset["spatial_ref"].attrs["GeoTransform"].split(" ")
         ]
-        grid_res = [abs(geotrans[1]), abs(geotrans[5])]
+        grid_res = [round(abs(geotrans[1]), 8), round(abs(geotrans[5]), 8)]
 
         # get crs
         crs_wkt = dataset["spatial_ref"].attrs["spatial_ref"]
@@ -197,12 +196,12 @@ class DbSeabed:
             "service_url": DbSeabed.DATA_SERVICES[var_name]["link"],
             "crs_wkt": crs_wkt,
             "node_bounding_box": [
-                dataset.x.values[0],
-                dataset.y.values[0],
-                dataset.x.values[-1],
-                dataset.y.values[-1],
+                round(dataset.x.values[0], 8),
+                round(dataset.y.values[0], 8),
+                round(dataset.x.values[-1], 8),
+                round(dataset.y.values[-1], 8),
             ],
-            "grid_bounding_box": dataset.rio.bounds(),
+            "grid_bounding_box": [round(value, 8) for value in dataset.rio.bounds()],
             "grid_res": grid_res,
         }
 
