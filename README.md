@@ -12,7 +12,9 @@ applies math methods to integrate/harmonize those
 and produces gridded data on the major properties of the seabed.
 The scope is the global ocean and across all depth zones.
 
-The current page serves only the data for the Gulf of Mexico region. Please note that
+The current page serves only the data for the Gulf of Mexico region. 
+The entire collection of data is available at
+[this webpage](https://csdms.colorado.edu/wiki/Data:DBSEABED). Please note that
 the data will be updated from time to time, approximately annually.
 
 bmi_dbseabed also includes a [Basic Model Interface (BMI)](https://bmi.readthedocs.io/en/latest/),
