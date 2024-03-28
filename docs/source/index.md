@@ -107,7 +107,7 @@ var_location = data_comp.get_var_location(var_name)
 var_type = data_comp.get_var_type(var_name)
 var_grid = data_comp.get_var_grid(var_name)
 
-print(f'{var_name=} \n{var_unit=} \n{var_location=} \n{var_type=} \n{var_grid=}')
+print(f"{var_name=} \n{var_unit=} \n{var_location=} \n{var_type=} \n{var_grid=}")
 
 # get variable grid info
 grid_rank = data_comp.get_grid_rank(var_grid)
@@ -123,7 +123,7 @@ data_comp.get_grid_spacing(var_grid, grid_spacing)
 grid_origin = np.empty(grid_rank)
 data_comp.get_grid_origin(var_grid, grid_origin)
 
-print(f'{grid_rank=} \n{grid_size=} \n{grid_shape=} \n{grid_spacing=} \n{grid_origin=}')
+print(f"{grid_rank=} \n{grid_size=} \n{grid_shape=} \n{grid_spacing=} \n{grid_origin=}")
 
 # get variable data
 data = np.empty(grid_size, var_type)
