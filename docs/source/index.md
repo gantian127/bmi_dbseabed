@@ -54,8 +54,10 @@ pip install -e .
 Below shows how to use two methods to download the datasets.
 
 You can learn more details from the [tutorial notebook][bmi_dbseabed-notebook].
-To run this notebook, please go to the [CSDMS EKT Lab][bmi_dbseabed-csdms] and follow
-the instruction in the "Lab notes" section.
+
+[//]: # (To run this notebook, please go to the [CSDMS EKT Lab][bmi_dbseabed-csdms] and follow)
+
+[//]: # (the instruction in the "Lab notes" section.)
 
 **Example 1**: use DbSeabed class to download data (Recommended method)
 
