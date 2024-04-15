@@ -19,7 +19,7 @@ the data will be updated from time to time, approximately annually.
 
 bmi_dbseabed also includes a [Basic Model Interface (BMI)](https://bmi.readthedocs.io/en/latest/),
 which converts the dbSEABED datasets into a reusable,
-plug-and-play data component ([pymt_dbseabed](https://pymt-soilgrids.readthedocs.io/)) for
+plug-and-play data component ([pymt_dbseabed](https://pymt-dbseabed.readthedocs.io/)) for
 the [PyMT](https://pymt.readthedocs.io/en/latest/?badge=latest) modeling framework developed
 by Community Surface Dynamics Modeling System ([CSDMS](https://csdms.colorado.edu/wiki/Main_Page)).
 
