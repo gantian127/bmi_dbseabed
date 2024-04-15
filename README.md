@@ -1,6 +1,6 @@
 # bmi_dbseabed
 [![Documentation Status](https://readthedocs.org/projects/bmi_dbseabed/badge/?version=latest)](https://bmi-dbseabed.readthedocs.io/en/latest/)
-[![MIT license](https://img.shields.io/badge/License-MIT-blue.svg)](https://github.com/gantian127/bmi_dbseabed/blob/master/LICENSE.txt)
+[![MIT license](https://img.shields.io/badge/License-MIT-blue.svg)](https://github.com/gantian127/bmi_dbseabed/blob/master/LICENSE.md)
 
 
 
