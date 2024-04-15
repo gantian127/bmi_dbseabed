@@ -1,5 +1,5 @@
 [project]
-name = "dbseabed"
+name = "bmi_dbseabed"
 requires-python = ">=3.10"
 description = "Fetch ocean seabed datasets from the dbSEABED system https://instaar.colorado.edu/~jenkinsc/dbseabed/"
 keywords = [
@@ -24,7 +24,6 @@ classifiers = [
     "Programming Language :: Python :: 3.12",
     "Programming Language :: Python :: Implementation :: CPython",
     "Topic :: Scientific/Engineering :: Oceanography",
-    "Topic :: Scientific/Engineering :: Geology",
 ]
 dependencies = [
     "bmipy",
