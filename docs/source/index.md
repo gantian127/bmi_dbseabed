@@ -57,9 +57,9 @@ Below shows how to use two methods to download the datasets.
 
 You can learn more details from the [tutorial notebook][bmi_dbseabed-notebook].
 
-[//]: # (To run this notebook, please go to the [CSDMS EKT Lab][bmi_dbseabed-csdms] and follow)
+To run this notebook, please go to the [CSDMS EKT Lab][bmi_dbseabed-csdms] and follow
 
-[//]: # (the instruction in the "Lab notes" section.)
+the instruction in the "Lab notes" section.
 
 **Example 1**: use DbSeabed class to download data (Recommended method)
 
@@ -192,7 +192,7 @@ data_comp.finalize()
 [bmi-docs]: https://bmi.readthedocs.io
 [csdms]: https://csdms.colorado.edu
 [pymt-docs]: https://pymt.readthedocs.io
-[bmi_dbseabed-csdms]: https://csdms.colorado.edu/wiki/
+[bmi_dbseabed-csdms]: https://csdms.colorado.edu/wiki/Lab-0036
 [bmi_dbseabed-github]: https://github.com/gantian127/bmi_dbseabed
 [dbSEABED-website]: https://instaar.colorado.edu/~jenkinsc/dbseabed/
 [bmi_dbseabed-notebook]: https://github.com/gantian127/bmi_dbseabed/blob/master/notebooks/bmi_dbseabed.ipynb
