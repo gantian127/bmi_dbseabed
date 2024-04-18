@@ -9,7 +9,7 @@ keywords = [
 ]
 authors = [
     { name = "Tian Gan", email = "jamy127@foxmail.com" },
-    { name = "Chris Jenkins", email = "jenkinsc0@gmail.com" },
+    { name = "Chris Jenkins", email = "chris.jenkins@colorado.edu" },
 ]
 maintainers = [
     { name = "Tian Gan", email = "jamy127@foxmail.com" },
