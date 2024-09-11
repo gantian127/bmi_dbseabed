@@ -49,14 +49,14 @@ $ pip install -e .
 ### Quick Start
 Below shows how to use two methods to download the datasets.
 
-You can learn more details from the [tutorial notebook](notebooks/bmi_dbseabed.ipynb). To run this notebook, 
+You can learn more details from the [tutorial notebook](notebooks/bmi_dbseabed.ipynb). To run this notebook,
 please go to the [CSDMS EKT Lab](https://csdms.colorado.edu/wiki/Lab-0036) and follow the instruction
 in the "Lab notes" section.
 
 #### Example 1: use DbSeabed class to download data (Recommended method)
-In this example, it downloads the surficial seafloor carbonate fraction (var_name="carbonate"). 
+In this example, it downloads the surficial seafloor carbonate fraction (var_name="carbonate").
 To learn all supported data variables, please check the "var_name" from
-the [Parameter settings](https://bmi-dbseabed.readthedocs.io/en/latest/#parameter-settings). 
+the [Parameter settings](https://bmi-dbseabed.readthedocs.io/en/latest/#parameter-settings).
 
 ```python
 import matplotlib.pyplot as plt
