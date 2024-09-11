@@ -12,7 +12,7 @@ applies math methods to integrate/harmonize those
 and produces gridded data on the major properties of the seabed.
 The scope is the global ocean and across all depth zones.
 
-The current page serves only the data for the Gulf of Mexico region.
+**The current page serves only the data for the Gulf of Mexico region [Bounding box: west=-98, south=18, east=-80, north=31]**.
 An overview of the entire collection of data is available at
 [this webpage](https://csdms.colorado.edu/wiki/Data:DBSEABED). Please note that
 the data will be updated from time to time, approximately annually.
@@ -49,13 +49,14 @@ $ pip install -e .
 ### Quick Start
 Below shows how to use two methods to download the datasets.
 
-You can learn more details from the [tutorial notebook](notebooks/bmi_dbseabed.ipynb).
-
-To run this notebook, please go to the
-[CSDMS EKT Lab](https://csdms.colorado.edu/wiki/Lab-0036) and follow the instruction
+You can learn more details from the [tutorial notebook](notebooks/bmi_dbseabed.ipynb). To run this notebook, 
+please go to the [CSDMS EKT Lab](https://csdms.colorado.edu/wiki/Lab-0036) and follow the instruction
 in the "Lab notes" section.
 
 #### Example 1: use DbSeabed class to download data (Recommended method)
+In this example, it downloads the surficial seafloor carbonate fraction (var_name="carbonate"). 
+To learn all supported data variables, please check the "var_name" from
+the [Parameter settings](https://bmi-dbseabed.readthedocs.io/en/latest/#parameter-settings). 
 
 ```python
 import matplotlib.pyplot as plt
