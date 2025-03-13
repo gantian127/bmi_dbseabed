@@ -52,6 +52,17 @@ to install bmi_dbseabed.
 pip install -e .
 ```
 
+# Citation
+Please include the following references when citing this software package:
+
+Gan, T., Tucker, G.E., Hutton, E.W.H., Piper, M.D., Overeem, I., Kettner, A.J.,
+Campforts, B., Moriarty, J.M., Undzis, B., Pierce, E., McCready, L., 2024:
+CSDMS Data Components: data–model integration tools for Earth surface processes
+modeling. Geosci. Model Dev., 17, 2165–2185. https://doi.org/10.5194/gmd-17-2165-2024
+
+Gan, T., & Jenkins, C. (2025). CSDMS dbSEABED Data Component. Zenodo.
+https://doi.org/10.5281/zenodo.15021967
+
 # Quick Start
 
 Below shows how to use two methods to download the datasets.
